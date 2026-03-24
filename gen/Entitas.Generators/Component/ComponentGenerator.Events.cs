@@ -130,6 +130,9 @@ namespace Entitas.Generators
                                         }
                                     }
                                 }
+
+                                if (_listenerBuffer.Count > 0)
+                                    _listenerBuffer.Clear();
                             }
                         }
 
@@ -170,6 +173,9 @@ namespace Entitas.Generators
                                         listener.{{@event.EventMethod}}(entity{{optionalComponentValueMethodArgs}});
                                     }
                                 }
+
+                                if (_listenerBuffer.Count > 0)
+                                    _listenerBuffer.Clear();
                             }
                         }
 
